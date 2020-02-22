@@ -3,7 +3,12 @@ guid: 37cc9af5d927f52419b5df25289896a9
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M1893_BAYONET1
+    second: {fileID: 2100000, guid: 4a41c2d9676e1be479528ba9ef4dcc23, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

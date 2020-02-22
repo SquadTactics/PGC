@@ -3,7 +3,17 @@ guid: 085c238e4b723bb46ac10417d8aaddc1
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAUSER_M1893_BODY
+    second: {fileID: 2100000, guid: 4c3f6836f8f067a4899fb323961bf3d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAUSER_M1893_EXTRAS
+    second: {fileID: 2100000, guid: f5d27b85b1aec1343a9bffa44905d263, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

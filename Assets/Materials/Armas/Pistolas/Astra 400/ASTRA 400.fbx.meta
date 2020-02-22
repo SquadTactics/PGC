@@ -3,7 +3,27 @@ guid: fe36ff1abd4d66349ab8ef29fc7b6aae
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ASTRA_400_CLIP1
+    second: {fileID: 2100000, guid: 686ac7764d5b7584fb327a1530e873be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ASTRA_400_EXTRAS
+    second: {fileID: 2100000, guid: 5257706a5e3288c449c5ff48d564742f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ASTRA_400_GRIP
+    second: {fileID: 2100000, guid: ca50731141f35924f99d3d662c58a6e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ASTRA_400_METAL
+    second: {fileID: 2100000, guid: 25d78d61aa739da4798af48ecf56af2f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
