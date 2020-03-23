@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * Speed * Time.deltaTime);
+        transform.Translate(Vector3.back * Speed * Time.deltaTime);
         Destroy(gameObject, 5f);
     }
 }

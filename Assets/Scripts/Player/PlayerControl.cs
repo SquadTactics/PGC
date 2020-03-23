@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
 
     public float SpeedMoving;
     public float ForceJump;
+    public Transform ReferencePointLook;
 
     private CharacterController PController;
     private Vector3 DirectionMove;
@@ -16,13 +17,14 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         PController = gameObject.GetComponentInChildren<CharacterController>();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         Moving();
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Guns[0].Shoot();
         }
@@ -31,6 +33,8 @@ public class PlayerControl : MonoBehaviour
         {
             Guns[0].Reload();
         }
+
+        transform.LookAt(new Vector3(ReferencePointLook.position.x, transform.position.y, ReferencePointLook.transform.position.z));
     }
 
     void Moving()
