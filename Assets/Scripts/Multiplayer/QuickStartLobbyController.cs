@@ -8,7 +8,9 @@ using Photon.Realtime;
 public class QuickStartLobbyController : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private Button quickStartButton;
+    private GameObject quickStartButton;
+    [SerializeField]
+    private GameObject quickCancelButton;
 
     [SerializeField]
     private int RoomSize;
@@ -18,18 +20,23 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        this.textButton = quickStartButton.GetComponent<Text>();
+        this.textButton = quickStartButton.GetComponentInChildren<Text>();
+        if(textButton == null)
+        {
+            Debug.Log("Sem Texto No Botão");
+        }
     }
-
+  
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
-        this.textButton.text = "Carregando!";
+        quickStartButton.SetActive(true);
     }
 
     public void QuickStart()
     {
-        this.textButton.text = "Cancelar";
+        quickCancelButton.SetActive(true);
+        quickStartButton.SetActive(false);
         PhotonNetwork.JoinRandomRoom();
         Debug.Log("Quick Start");
     }
@@ -57,7 +64,8 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
 
     public void QuickCancel()
     {
-        this.textButton.text = "Conectar";
+        quickCancelButton.SetActive(false);
+        quickStartButton.SetActive(true);
         PhotonNetwork.LeaveRoom();
     }
 }
