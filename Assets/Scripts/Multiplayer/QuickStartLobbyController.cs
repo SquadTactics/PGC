@@ -15,16 +15,10 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
     [SerializeField]
     private int RoomSize;
 
-    private Text textButton;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.textButton = quickStartButton.GetComponentInChildren<Text>();
-        if(textButton == null)
-        {
-            Debug.Log("Sem Texto No Botão");
-        }
     }
   
     public override void OnConnectedToMaster()
