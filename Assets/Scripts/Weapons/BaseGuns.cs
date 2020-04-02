@@ -7,6 +7,7 @@ public abstract class BaseGuns : MonoBehaviour
     public int InitialAmmo;
     public int CapacityAmmo;
     public int BulletComb;
+    public int GunDamage;
     public float FireRate;
     public AudioClip[] GunAudioClip;
     public Bullet GunBullet;
@@ -20,7 +21,7 @@ public abstract class BaseGuns : MonoBehaviour
     {
         BulletComb = InitialAmmo;
         AnimGuns = GetComponentInChildren<Animator>();
-        TempFire = FireRate;
+        TempFire = FireRate;  
     }
 
     protected void Update()
@@ -42,8 +43,8 @@ public abstract class BaseGuns : MonoBehaviour
     {
         OnReload();
         if (BulletComb < CapacityAmmo)
-        {
-            if(AnimGuns != null)
+        {           
+            if (AnimGuns != null)
             {
                 AnimGuns.SetTrigger("Reload");
             }

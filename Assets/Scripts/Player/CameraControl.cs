@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public float sensitivity = 60f;
+    public float sensitivity;
+    public GameObject TargetLook;
     public GameObject Player;
 
-    private Vector3 Offset;
-
-    void Start()
+    private void Start()
     {
-        Offset = transform.position - Player.transform.position;
-    }
-
-    private void LateUpdate()
-    {
-        transform.position = Player.transform.position + Offset;
+       
     }
 
     void Update()
@@ -30,5 +24,8 @@ public class CameraControl : MonoBehaviour
         {
             transform.Rotate(movementY, 0f, 0f);
         }
-    }
+
+        //transform.LookAt(new Vector3(TargetLook.transform.position.x, transform.position.y, TargetLook.transform.position.z));
+        
+    }  
 }
