@@ -64,7 +64,7 @@ public class PlayerControl : MonoBehaviour
         {
             if (CanRun)
             { 
-                PController.SimpleMove(Move * SpeedMoving * RunSpeed);
+            PController.SimpleMove(Move * SpeedMoving * RunSpeed);
             }
         }
 

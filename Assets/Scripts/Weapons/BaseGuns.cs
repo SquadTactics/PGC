@@ -14,6 +14,7 @@ public abstract class BaseGuns : MonoBehaviour
     public Transform SpawnBullet;
 
     private Animator AnimGuns;
+    private AudioSource WeaponAudioSource;
     private float TempFire;
     public bool CanFire = true;
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public abstract class BaseGuns : MonoBehaviour
     {
         BulletComb = InitialAmmo;
         AnimGuns = GetComponentInChildren<Animator>();
+        WeaponAudioSource = GetComponentInChildren<AudioSource>();
         TempFire = FireRate;  
     }
 
@@ -58,6 +60,8 @@ public abstract class BaseGuns : MonoBehaviour
         OnShoot();
         if (BulletComb > 0 && CanFire)
         {
+            WeaponAudioSource.clip = GunAudioClip[0];
+            WeaponAudioSource.Play();
             BulletComb--;
             if (AnimGuns != null)
             {
