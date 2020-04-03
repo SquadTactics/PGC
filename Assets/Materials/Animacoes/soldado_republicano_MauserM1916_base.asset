@@ -30,7 +30,7 @@ MonoBehaviour:
     ConfigToolMode:
       valueInternal: 1
     OpenedClipIndex:
-      valueInternal: 0
+      valueInternal: 1
     SelectedFrame:
       valueInternal: 0
     TimelineViewMode:
@@ -18579,7 +18579,7 @@ MonoBehaviour:
       Name:
         valueInternal: clip2
       Framerate:
-        valueInternal: 60
+        valueInternal: 30
       Loop:
         valueInternal: 0
       GenerateHumanoidMotionCurves:
