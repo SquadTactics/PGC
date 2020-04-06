@@ -9,6 +9,7 @@ public abstract class BaseGuns : MonoBehaviour
     public int BulletComb;
     public int GunDamage;
     public float FireRate;
+    public bool CanFire = true;
     public AudioClip[] GunAudioClip;
     public Bullet GunBullet;
     public Transform SpawnBullet;
@@ -16,20 +17,19 @@ public abstract class BaseGuns : MonoBehaviour
     private Animator AnimGuns;
     private AudioSource WeaponAudioSource;
     private float TempFire;
-    public bool CanFire = true;
+
     // Start is called before the first frame update
     protected void Start()
     {
         BulletComb = InitialAmmo;
         AnimGuns = GetComponentInChildren<Animator>();
         WeaponAudioSource = GetComponentInChildren<AudioSource>();
-        TempFire = FireRate;  
+        TempFire = FireRate;
     }
 
     protected void Update()
     {
         TempFire += Time.deltaTime;
-
         if (TempFire > FireRate)
         {
             CanFire = true;
@@ -69,6 +69,11 @@ public abstract class BaseGuns : MonoBehaviour
             }
             TempFire = 0;
         }
+    }
+
+    public void Crosshair()
+    {
+        
     }
 
     protected abstract void OnShoot();

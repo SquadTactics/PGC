@@ -10,7 +10,7 @@ public class CameraControl : MonoBehaviour
 
     private void Start()
     {
-       
+        Cursor.visible = false;
     }
 
     void Update()
@@ -24,7 +24,6 @@ public class CameraControl : MonoBehaviour
         {
             transform.Rotate(movementY, 0f, 0f);
         }
-
         //transform.LookAt(new Vector3(TargetLook.transform.position.x, transform.position.y, TargetLook.transform.position.z));
         
     }  

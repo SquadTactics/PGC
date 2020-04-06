@@ -9,7 +9,7 @@ public class M1916 : BaseGuns
     new void Start()
     {
         base.Start();
-       // GunSounds = gameObject.GetComponent<AudioSource>();
+       
     }
     // Update is called once per frame
     new void Update()
@@ -19,8 +19,7 @@ public class M1916 : BaseGuns
 
     protected override void OnReload()
     {
-        //GunSounds.clip = GunAudioClip[1];
-        //GunSounds.Play();
+        
     }
 
     protected override void OnShoot()
@@ -28,8 +27,7 @@ public class M1916 : BaseGuns
         if (BulletComb > 0 && CanFire)
         {
             Instantiate(GunBullet, SpawnBullet.transform.position, SpawnBullet.transform.rotation);
-            //GunSounds.clip = GunAudioClip[0];
-            //GunSounds.Play();
+            
         }
     }
 }
