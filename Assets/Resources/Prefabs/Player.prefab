@@ -114,6 +114,8 @@ MonoBehaviour:
   _guns: []
   _speedMovement: 4
   _forceJump: 2
+  _verticalMax: 20
+  _verticalMin: -20
 --- !u!114 &-5561445946559086055
 MonoBehaviour:
   m_ObjectHideFlags: 0

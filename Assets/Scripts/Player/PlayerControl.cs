@@ -16,6 +16,11 @@ public class PlayerControl : MonoBehaviour
     private float _forceJump;
 
     private Camera _playerCamera;
+    private Quaternion _cameraRotation;
+    [SerializeField]
+    private float _verticalMax;
+    [SerializeField]
+    private float _verticalMin;
     private PhotonView _photonView;
     private CharacterController _pController;
     private float _gravity = 9.81f;
@@ -45,6 +50,7 @@ public class PlayerControl : MonoBehaviour
                 _playerCamera.transform.SetParent(this.transform);
                 _playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 2);
                 _playerCamera.transform.localEulerAngles = new Vector3(0, 0, 0);
+                _cameraRotation = _playerCamera.transform.localRotation;
             }
 
         }
@@ -81,6 +87,9 @@ public class PlayerControl : MonoBehaviour
 
     void Rotation()
     {
+        _cameraRotation.x -= Input.GetAxis("Mouse Y");
+        _playerCamera.transform.localRotation = Quaternion.Euler(Mathf.Clamp(_cameraRotation.x, _verticalMin, _verticalMax),
+           _cameraRotation.y, _cameraRotation.z);
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y + Input.GetAxis("Mouse X"), transform.localEulerAngles.z);
     }
 }
