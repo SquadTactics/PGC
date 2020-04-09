@@ -12,7 +12,9 @@ public class PlayerControl : MonoBehaviour
     public float RunSpeed;
     public float ForceJump;
     public Crosshair GunCrosshair;
+    public Transform SpawnGuns;
 
+    private int CurrentGun = 0;
     private float CurrentSpeedMoving;
     private float LowerMovingSpeed;
     private bool IsLower = true;
@@ -29,6 +31,7 @@ public class PlayerControl : MonoBehaviour
     {
         CurrentSpeedMoving = SpeedMoving;
         LowerMovingSpeed = SpeedMoving / 2;
+        Instantiate(Guns[CurrentGun], SpawnGuns.transform.position, SpawnGuns.transform.rotation);
 
         PController = gameObject.GetComponentInChildren<CharacterController>();
         PlayerAnimator = gameObject.GetComponent<Animator>();
@@ -40,7 +43,7 @@ public class PlayerControl : MonoBehaviour
         Moving();
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Guns[0].Shoot();
+            Guns[CurrentGun].Shoot();
             Debug.Log("Atirando");
         }
 
@@ -60,7 +63,7 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Guns[0].Reload();
+            Guns[CurrentGun].Reload();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
