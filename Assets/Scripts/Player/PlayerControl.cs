@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 
 public class PlayerControl : MonoBehaviour
 {
-    public List<BaseGuns> Guns;
+    [SerializeField]
+    private List<BaseGuns> _guns;
 
     public int LifePlayer;
     public float SpeedMoving;
@@ -103,7 +105,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void Moving()
+    void Movement()
     {
         DirectionMove.x = Input.GetAxis("Horizontal");
         DirectionMove.y = Input.GetAxis("Vertical");
@@ -117,5 +119,6 @@ public class PlayerControl : MonoBehaviour
         {
             PController.SimpleMove(Move * LowerMovingSpeed);
         }
+
     }
 }
