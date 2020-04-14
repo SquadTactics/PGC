@@ -9,87 +9,116 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private List<BaseGuns> _guns;
 
-    [SerializeField]
-    private float _speedMovement;
+    public int LifePlayer;
+    public float SpeedMoving;
+    public float RunSpeed;
+    public float ForceJump;
+    public Crosshair GunCrosshair;
+    public Transform SpawnGuns;
 
-    [SerializeField]
-    private float _forceJump;
-
-    private Camera _playerCamera;
-    private Quaternion _cameraRotation;
-    [SerializeField]
-    private float _verticalMax;
-    [SerializeField]
-    private float _verticalMin;
-    private PhotonView _photonView;
-    private CharacterController _pController;
-    private float _gravity = 9.81f;
+    private int CurrentGun = 0;
+    private float CurrentSpeedMoving;
+    private float LowerMovingSpeed;
+    private bool IsLower = true;
+    private bool CanRun = true;
+    private bool CanCrosshair = true;
+    private Vector3 Move;
+    private Vector3 DirectionMove;
+    private Animator PlayerAnimator;
+    private CharacterController PController;
+    
+    
+    // Start is called before the first frame update
     void Start()
     {
-        _pController = gameObject.GetComponent<CharacterController>();
-        _photonView = gameObject.GetComponent<PhotonView>();
-        _playerCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        if (_pController == null)
-        {
-            Debug.Log("Componente CharacterController faltando!");
-        }
+        CurrentSpeedMoving = SpeedMoving;
+        LowerMovingSpeed = SpeedMoving / 2;
+        Instantiate(Guns[CurrentGun], SpawnGuns.transform.position, SpawnGuns.transform.rotation);
 
-        if(_photonView == null)
-        {
-            Debug.Log("Sem Photon View");
-        }
-
-        if(_playerCamera == null)
-        {
-            Debug.Log("Player Sem Camera");
-        }
-        else
-        {
-            if (_photonView.IsMine)
-            {
-                _playerCamera.transform.SetParent(this.transform);
-                _playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z - 2);
-                _playerCamera.transform.localEulerAngles = new Vector3(0, 0, 0);
-                _cameraRotation = _playerCamera.transform.localRotation;
-            }
-
-        }
+        PController = gameObject.GetComponentInChildren<CharacterController>();
+        PlayerAnimator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_photonView.IsMine)
+        Moving();
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Movement();
-            Rotation();
-            if (Input.GetButtonDown("Fire1") && _guns[0] != null)
+            Guns[CurrentGun].Shoot();
+            Debug.Log("Atirando");
+        }
+
+        if (Input.GetKey(KeyCode.Mouse1) && CanCrosshair)
+        {
+            GunCrosshair.GetComponent<Crosshair>().enabled = true;
+            CanCrosshair = false;
+            Debug.Log("Mirando");
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            GunCrosshair.GetComponent<Crosshair>().enabled = false;
+            CanCrosshair = true;
+            Debug.Log("Deixou de Mirar");
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Guns[CurrentGun].Reload();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            if (IsLower)
             {
-                _guns[0].Shoot();
+                PlayerAnimator.SetTrigger("Lower");
+                GunCrosshair.GetComponent<Crosshair>().spread = 10;
+                CanCrosshair = false;
+                IsLower = false;
+                CanRun = false; 
             }
 
-            if (Input.GetKeyDown(KeyCode.R) && _guns[0] != null)
+            else if (!IsLower)
             {
-                _guns[0].Reload();
+                PlayerAnimator.SetTrigger("NotLower");
+                GunCrosshair.GetComponent<Crosshair>().spread = 20;
+                CanCrosshair = true;
+                IsLower = true;
+                CanRun = true;
             }
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (CanRun)
+            { 
+            PController.SimpleMove(Move * SpeedMoving * RunSpeed);
+                CanCrosshair = false;
+            }
+        }
+
+        else
+        {
+            SpeedMoving = CurrentSpeedMoving;
+            CanCrosshair = true;
         }
     }
 
     void Movement()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        move.y -= _gravity;
-        move *= _speedMovement;
-        move = transform.TransformDirection(move);
-        _pController.Move(move * Time.deltaTime);
+        DirectionMove.x = Input.GetAxis("Horizontal");
+        DirectionMove.y = Input.GetAxis("Vertical");
+        Move = new Vector3(DirectionMove.x, 0, DirectionMove.y);
+        if (IsLower)
+        {
+            PController.SimpleMove(Move * SpeedMoving);
+        }
 
-    }
+        else
+        {
+            PController.SimpleMove(Move * LowerMovingSpeed);
+        }
 
-    void Rotation()
-    {
-        _cameraRotation.x -= Input.GetAxis("Mouse Y");
-        _playerCamera.transform.localRotation = Quaternion.Euler(Mathf.Clamp(_cameraRotation.x, _verticalMin, _verticalMax),
-           _cameraRotation.y, _cameraRotation.z);
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y + Input.GetAxis("Mouse X"), transform.localEulerAngles.z);
     }
 }

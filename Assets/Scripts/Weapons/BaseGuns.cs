@@ -6,53 +6,74 @@ public abstract class BaseGuns : MonoBehaviour
 {
     public int InitialAmmo;
     public int CapacityAmmo;
-    public int Munition;
     public int BulletComb;
+    public int GunDamage;
     public float FireRate;
+    public bool CanFire = true;
     public AudioClip[] GunAudioClip;
     public Bullet GunBullet;
     public Transform SpawnBullet;
 
     private Animator AnimGuns;
+    private AudioSource WeaponAudioSource;
+    private float TempFire;
 
     // Start is called before the first frame update
     protected void Start()
     {
         BulletComb = InitialAmmo;
         AnimGuns = GetComponentInChildren<Animator>();
+        WeaponAudioSource = GetComponentInChildren<AudioSource>();
+        TempFire = FireRate;
     }
 
     protected void Update()
     {
-        
+        TempFire += Time.deltaTime;
+        if (TempFire > FireRate)
+        {
+            CanFire = true;
+        }
+
+        else
+        {
+            CanFire = false;
+        }
     }
 
     public void Reload()
     {
         OnReload();
-        if (Munition > 0 && BulletComb < CapacityAmmo)
-        {
-            if(AnimGuns != null)
+        if (BulletComb < CapacityAmmo)
+        {           
+            if (AnimGuns != null)
             {
                 AnimGuns.SetTrigger("Reload");
             }
-            Munition -= CapacityAmmo;
             BulletComb = 0;
-            BulletComb += CapacityAmmo;
+            BulletComb = CapacityAmmo;
         }
     }
 
     public void Shoot()
     {
         OnShoot();
-        if (BulletComb > 0)
-        { 
+        if (BulletComb > 0 && CanFire)
+        {
+            WeaponAudioSource.clip = GunAudioClip[0];
+            WeaponAudioSource.Play();
             BulletComb--;
             if (AnimGuns != null)
             {
                 AnimGuns.SetTrigger("Fire");
             }
+            TempFire = 0;
         }
+    }
+
+    public void Crosshair()
+    {
+        
     }
 
     protected abstract void OnShoot();
