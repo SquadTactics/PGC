@@ -6,7 +6,8 @@ public class Bullet : MonoBehaviour
 {
     // Start is called before the first frame update
     public float Speed;
-    public int BulletDamage;
+    public float DistanceShoot;
+    public float BulletDamage;
 
     private Collider BulletCollider;
 
@@ -18,8 +19,13 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DistanceShoot += transform.position.x * Time.deltaTime;
         transform.Translate(Vector3.back * Speed * Time.deltaTime);
-        Destroy(gameObject, 5f);
+        if (DistanceShoot > 400f)
+        {
+            Destroy(gameObject);
+        }
+            
     }
 
     private void OnTriggerEnter(Collider other)

@@ -29,6 +29,7 @@ public abstract class BaseGuns : MonoBehaviour
 
     protected void Update()
     {
+
         TempFire += Time.deltaTime;
         if (TempFire > FireRate)
         {
@@ -69,11 +70,6 @@ public abstract class BaseGuns : MonoBehaviour
             }
             TempFire = 0;
         }
-    }
-
-    public void Crosshair()
-    {
-        
     }
 
     protected abstract void OnShoot();

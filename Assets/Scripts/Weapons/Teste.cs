@@ -6,7 +6,7 @@ public class Teste : MonoBehaviour
 {
     // Start is called before the first frame update
     //private Collider CubeCollider;
-    public int CubeLife;
+    public float CubeLife;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class Teste : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CubeLife == 0)
+        if (CubeLife <= 0)
         {
             Debug.Log("Inimigo Morto");
             Destroy(gameObject);
