@@ -126,6 +126,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1148011150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6833472183041694239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e8a61b46441374fb6432920a491e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialAmmo: 6
+  CapacityAmmo: 6
+  BulletComb: 0
+  GunDamage: 0
+  FireRate: 1
+  CanFire: 1
+  GunAudioClip: []
+  GunBullet: {fileID: -6697414871804016715, guid: 4c2c7176760206a4a885feb8f751ebb6,
+    type: 3}
+  SpawnBullet: {fileID: 1464949050}
 --- !u!1001 &3311469163024335638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,17 +158,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.21
+      value: 0.069
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.296
+      value: 1.259
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.58
+      value: 0.692
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
@@ -156,7 +178,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
@@ -166,7 +188,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
@@ -181,7 +203,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
         type: 3}

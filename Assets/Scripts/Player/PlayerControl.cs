@@ -22,8 +22,6 @@ public class PlayerControl : MonoBehaviour
     private bool IsLower = true;
     private bool CanRun = true;
     private bool CanCrosshair = true;
-    private Quaternion CameraRotation;
-    private Camera PlayerCamera;
     private Vector3 Move;
     private Vector3 DirectionMove;
     private Animator PlayerAnimator;
@@ -36,7 +34,6 @@ public class PlayerControl : MonoBehaviour
         CurrentSpeedMoving = SpeedMoving;
         LowerMovingSpeed = SpeedMoving / 2;
 
-        PlayerCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         PController = gameObject.GetComponentInChildren<CharacterController>();
         PlayerAnimator = gameObject.GetComponent<Animator>();
     }
@@ -45,7 +42,6 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         Moving();
-        RotationCamera();
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Guns[CurrentGun].Shoot();
@@ -123,13 +119,5 @@ public class PlayerControl : MonoBehaviour
             PController.SimpleMove(Move * LowerMovingSpeed);
         }
 
-    }
-
-    void RotationCamera()
-    {
-        CameraRotation.x = Input.GetAxis("Mouse Y");
-        PlayerCamera.transform.localRotation = Quaternion.Euler(Mathf.Clamp(CameraRotation.x, VerticalMin, VerticalMax),
-        CameraRotation.y, CameraRotation.z);
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y + Input.GetAxis("Mouse X"), transform.localEulerAngles.z);
     }
 }

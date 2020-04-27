@@ -7,7 +7,6 @@ public abstract class BaseGuns : MonoBehaviour
     public int InitialAmmo;
     public int CapacityAmmo;
     public int BulletComb;
-    public int GunDamage;
     public float FireRate;
     public bool CanFire = true;
     public AudioClip[] GunAudioClip;
