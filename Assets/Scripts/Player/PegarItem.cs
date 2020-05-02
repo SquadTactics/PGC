@@ -56,7 +56,7 @@ public class PegarItem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("G") && equiped == true)
+        if (Input.GetKeyDown(KeyCode.G) && equiped == true)
         {
             var itemEquip = gameObject;
             itemEquip = GameObject.FindWithTag("Equipado");

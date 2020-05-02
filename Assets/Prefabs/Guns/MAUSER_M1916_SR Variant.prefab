@@ -141,10 +141,12 @@ MonoBehaviour:
   InitialAmmo: 6
   CapacityAmmo: 6
   BulletComb: 0
-  GunDamage: 0
   FireRate: 1
   CanFire: 1
-  GunAudioClip: []
+  GunAudioClip:
+  - {fileID: 8300000, guid: 1af61be19f5a05744b7726f89f8f1104, type: 3}
+  - {fileID: 8300000, guid: ed871de00a42b9c44b3aabd57bd8cfcf, type: 3}
+  - {fileID: 8300000, guid: 15dda3d3509377a4a83c7618d606ed4d, type: 3}
   GunBullet: {fileID: -6697414871804016715, guid: 4c2c7176760206a4a885feb8f751ebb6,
     type: 3}
   SpawnBullet: {fileID: 1464949050}
@@ -219,6 +221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9f4cecc50aea2e54a9c8aa515d0cf864,
+        type: 3}
+      propertyPath: m_TagString
+      value: Arma
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f4cecc50aea2e54a9c8aa515d0cf864, type: 3}

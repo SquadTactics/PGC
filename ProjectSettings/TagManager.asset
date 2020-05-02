@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - Cube
+  - Arma
+  - Equipado
   layers:
   - Default
   - TransparentFX
