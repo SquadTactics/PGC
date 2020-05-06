@@ -70,7 +70,24 @@ public abstract class BaseGuns : MonoBehaviour
             TempFire = 0;
         }
     }
+    public void DrawnSight()
+    {
+        ShowSight();
+    }
 
+    public void EraseSight()
+    {
+        RemoveSight();
+    }
+
+    public void TamMira(float Spread)
+    {
+        SetSpread(Spread);
+    }
+
+    protected abstract void SetSpread(float Spread);
+    protected abstract void ShowSight();
+    protected abstract void RemoveSight();
     protected abstract void OnShoot();
     protected abstract void OnReload();
 }

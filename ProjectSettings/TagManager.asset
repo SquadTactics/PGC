@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Cube
+  - Mira
   layers:
   - Default
   - TransparentFX
