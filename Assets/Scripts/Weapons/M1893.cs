@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class M1916 : BaseWeapons
+public class M1893 : BaseWeapons
 {
     // Start is called before the first frame update
     new void Start()
     {
         base.Start();
-        bulletProjectil[0].distanceBullet = gunDistanceShoot;
-        bulletProjectil[0].damageBullet = gunDamage;
     }
 
     // Update is called once per frame
@@ -19,12 +17,12 @@ public class M1916 : BaseWeapons
     }
 
     protected override void Shoot()
-    {
-        Instantiate(bulletProjectil[0], spawnBullet.position, spawnBullet.rotation);
+    { 
+        Instantiate(bulletProjectil[0], transform.position, transform.rotation);
     }
 
     protected override void Reload()
     {
-        
+       
     }
 }
