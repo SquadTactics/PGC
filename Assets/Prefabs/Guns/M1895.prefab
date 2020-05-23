@@ -277,9 +277,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4458970788275780434}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.5513048, y: 0.42079338, z: 0.45080045, w: -0.5619385}
+  m_LocalPosition: {x: 0.322, y: 0.158, z: 0.016}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
   - {fileID: 5941868913721390904}
   - {fileID: 6266936385258705433}
@@ -288,7 +288,7 @@ Transform:
   - {fileID: 3908960308034566858}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.899001, y: -87.757, z: 269.155}
 --- !u!114 &3465582338881983697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 10d20226a3f05a94eac6a8e333936dc2, type: 3}
   - {fileID: 8300000, guid: f162dac1dc2b2b6469d80cf5a505292c, type: 3}
   bulletProjectil:
-  - {fileID: 7049138832146242698, guid: 8a28ceea81d7f614985a1a30d4a439d7, type: 3}
+  - {fileID: 7049138832146242698, guid: 4a25c33b8801b034f8ccd280d0b478e2, type: 3}
   spawnBullet: {fileID: 3908960308034566858}
 --- !u!82 &491379181914642883
 AudioSource:

@@ -26,4 +26,13 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.root.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerController>().lifePlayer -= damageBullet;
+            Destroy(gameObject);
+        }
+    }
 }

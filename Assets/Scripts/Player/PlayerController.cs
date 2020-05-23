@@ -19,17 +19,21 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     private CharacterController characterController;
     private Quaternion cameraRotation;
-    private WeaponsController weaponsController; 
+    private WeaponsController weaponsController;
+    private Animator animPlayer;
 
     private bool isCrouching;
     private bool isSprint;
+    private float initialRotation;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         weaponsController = FindObjectOfType(typeof(WeaponsController)) as WeaponsController;
+        animPlayer = GetComponent<Animator>();  
         playerRb = GetComponent<Rigidbody>();
         GetWeapons(weaponId);
+        initialRotation = coluna.transform.rotation.x;
     }
 
     
