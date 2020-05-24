@@ -40,7 +40,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 1
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Head' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -96,8 +97,669 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: RAIZ
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PERNA_ESQUERDA
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PERNA_DIREITA
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JOELHO
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: JOELHO1
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CALCANHAR
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CALCANHAR1
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: COLUNA_1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: COLUNA_2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: OMBRO_ESQUERDO
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: OMBRO_DIREITO
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: COTOVELO_ESQUERDO
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: COTOVELO_DIREITO
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MAO_ESQUERDA
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MAO_DIREITA
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: POLEGAR_1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: POLEGAR_2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: POLEGAR_3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: INDICADOR_1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: INDICADOR_2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: INDICADOR_3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MEDIO_1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MEDIO_2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MEDIO_3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ANELAR_1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ANELAR_2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ANELAR_3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MINDINHO_1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MINDINHO_2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MINDINHO_3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: POLEGAR_4
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: POLEGAR_5
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: POLEGAR_6
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: INDICADOR_4
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: INDICADOR_5
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: INDICADOR_6
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MEDIO_4
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MEDIO_5
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MEDIO_6
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ANELAR_4
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ANELAR_5
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ANELAR_6
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MINDINHO_4
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MINDINHO_5
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MINDINHO_6
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: COLUNA_3
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CABECA
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Leon Nacionalista(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leon 1
+      parentName: Leon Nacionalista(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RAIZ
+      parentName: Leon Nacionalista(Clone)
+      position: {x: 0.00012401874, y: 0.9084956, z: -0.033484243}
+      rotation: {x: 0, y: 0, z: -0.6988385, w: 0.7152795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: COLUNA_1
+      parentName: RAIZ
+      position: {x: -0.06929766, y: 0.000093280505, z: 0}
+      rotation: {x: 0, y: 0, z: -0.000264131, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: COLUNA_2
+      parentName: COLUNA_1
+      position: {x: -0.14178762, y: 0.00243957, z: 0}
+      rotation: {x: 0, y: 0, z: -0.005985508, w: 0.9999821}
+      scale: {x: 1, y: 1, z: 1}
+    - name: COLUNA_3
+      parentName: COLUNA_2
+      position: {x: -0.14984293, y: -0.0007373688, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0011170043, w: 0.9999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PEITO
+      parentName: COLUNA_3
+      position: {x: -0.12404723, y: 0.0016110028, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7025006, w: 0.7116832}
+      scale: {x: 1, y: 1, z: 1}
+    - name: OMBRO_DIREITO
+      parentName: PEITO
+      position: {x: 0.18388097, y: 0.020472758, z: -0.0006612591}
+      rotation: {x: 0.9999695, y: -0.0078117847, z: 4.783339e-19, w: -6.123047e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: COTOVELO_DIREITO
+      parentName: OMBRO_DIREITO
+      position: {x: 0.24889138, y: -0.0022387267, z: 0.0090086}
+      rotation: {x: 0.00000001053639, y: -8.2310526e-11, z: -0.0078117847, w: 0.9999695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PULSO_DIREITO
+      parentName: COTOVELO_DIREITO
+      position: {x: 0.232681, y: -0.0016800001, z: -0.0090086}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MAO_DIREITA
+      parentName: PULSO_DIREITO
+      position: {x: 0.021982998, y: -0.00018, z: -0.000259}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ANELAR_4
+      parentName: MAO_DIREITA
+      position: {x: 0.057592, y: 0.0000000014422132, z: 0.0135253}
+      rotation: {x: 0.000000053633272, y: -0.05901171, z: 0.0000000094629815, w: 0.9982573}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ANELAR_5
+      parentName: ANELAR_4
+      position: {x: 0.025922539, y: 3.2565764e-10, z: -0.00000003534532}
+      rotation: {x: 0.000000106412585, y: 0.00750514, z: 0.000000003886757, w: 0.99997187}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ANELAR_6
+      parentName: ANELAR_5
+      position: {x: 0.025440045, y: 2.3840527e-10, z: 0.00000004115966}
+      rotation: {x: -0.00000021280884, y: 0.05151799, z: -0.000000006284479, w: 0.99867207}
+      scale: {x: 1, y: 1, z: 1}
+    - name: INDICADOR_4
+      parentName: MAO_DIREITA
+      position: {x: 0.058028, y: -0.0000000030705125, z: -0.02879574}
+      rotation: {x: 0.000000053601998, y: 0.06814844, z: -0.000000010928127, w: 0.9976752}
+      scale: {x: 1, y: 1, z: 1}
+    - name: INDICADOR_5
+      parentName: INDICADOR_4
+      position: {x: 0.023265183, y: -2.2049078e-10, z: 0.00055091723}
+      rotation: {x: -0.00000010614564, y: -0.012872336, z: -0.000000005884331, w: 0.99991715}
+      scale: {x: 1, y: 1, z: 1}
+    - name: INDICADOR_6
+      parentName: INDICADOR_5
+      position: {x: 0.023704989, y: -2.1417434e-10, z: -0.000000025067957}
+      rotation: {x: 0.0000000074391795, y: -0.055300385, z: -0.000000004073401, w: 0.99846977}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MEDIO_4
+      parentName: MAO_DIREITA
+      position: {x: 0.058464997, y: -8.374036e-10, z: -0.007853299}
+      rotation: {x: 0.00000005372521, y: -0.007935758, z: 0.0000000012725598, w: 0.9999685}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MEDIO_5
+      parentName: MEDIO_4
+      position: {x: 0.027489461, y: 4.6524062e-11, z: 0.000000014283915}
+      rotation: {x: 0.000000107884354, y: 0.039628938, z: -0.000000011917409, w: 0.9992145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MEDIO_6
+      parentName: MEDIO_5
+      position: {x: 0.03012744, y: -2.0203231e-10, z: 0.00060131773}
+      rotation: {x: 0.00000021492868, y: -0.031698167, z: 0.0000000127888455, w: 0.99949753}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MINDINHO_4
+      parentName: MAO_DIREITA
+      position: {x: 0.055847, y: 0.0000000035357486, z: 0.0331588}
+      rotation: {x: 0.00000005350419, y: -0.09095827, z: 0.000000014585858, w: 0.99585474}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MINDINHO_5
+      parentName: MINDINHO_4
+      position: {x: 0.01685796, y: 3.2566957e-10, z: 0.00000007246497}
+      rotation: {x: 0.00000010562416, y: 0.01070258, z: 0.0000000062733982, w: 0.9999427}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MINDINHO_6
+      parentName: MINDINHO_5
+      position: {x: 0.016353877, y: 2.421572e-10, z: 0.000000016007116}
+      rotation: {x: 0.00000021136258, y: 0.08029484, z: -0.000000043603936, w: 0.99677116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: POLEGAR_4
+      parentName: MAO_DIREITA
+      position: {x: 0.004363, y: -0.0000000031170355, z: -0.029232038}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: POLEGAR_5
+      parentName: POLEGAR_4
+      position: {x: 0.025741998, y: -0.0000000032691698, z: -0.0152704595}
+      rotation: {x: 0.00000010672953, y: 0.09310839, z: -0.000000029913846, w: 0.99565595}
+      scale: {x: 1, y: 1, z: 1}
+    - name: POLEGAR_6
+      parentName: POLEGAR_5
+      position: {x: 0.023532001, y: 8.2422955e-15, z: 0.000000018540785}
+      rotation: {x: -0.00000021333013, y: -0.09310839, z: 0.00000001994513, w: 0.99565595}
+      scale: {x: 1, y: 1, z: 1}
+    - name: OMBRO_ESQUERDO
+      parentName: PEITO
+      position: {x: -0.17483094, y: 0.020475265, z: -0.0006612377}
+      rotation: {x: 0, y: 0, z: 0.0078117847, w: 0.9999695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: COTOVELO_ESQUERDO
+      parentName: OMBRO_ESQUERDO
+      position: {x: -0.24889173, y: 0.0022339998, z: -0.009008637}
+      rotation: {x: 0, y: 0, z: -0.0078117847, w: 0.9999695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PULSO_ESQUERDO
+      parentName: COTOVELO_ESQUERDO
+      position: {x: -0.23268037, y: 0.0016844382, z: 0.009008637}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MAO_ESQUERDA
+      parentName: PULSO_ESQUERDO
+      position: {x: -0.021983793, y: 0.00017468196, z: 0.00025892947}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ANELAR_1
+      parentName: MAO_ESQUERDA
+      position: {x: -0.057591584, y: 0, z: -0.013525296}
+      rotation: {x: 0, y: -0.05901171, z: -0, w: 0.9982573}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ANELAR_2
+      parentName: ANELAR_1
+      position: {x: -0.025922235, y: 0, z: -1.6653345e-18}
+      rotation: {x: 0, y: 0.00750514, z: -0, w: 0.99997187}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ANELAR_3
+      parentName: ANELAR_2
+      position: {x: -0.025440438, y: 0, z: -3.1086245e-17}
+      rotation: {x: 0, y: 0.05151799, z: -0, w: 0.99867207}
+      scale: {x: 1, y: 1, z: 1}
+    - name: INDICADOR_1
+      parentName: MAO_ESQUERDA
+      position: {x: -0.058027886, y: 0, z: 0.028795792}
+      rotation: {x: 0, y: 0.06814844, z: -0, w: 0.9976752}
+      scale: {x: 1, y: 1, z: 1}
+    - name: INDICADOR_2
+      parentName: INDICADOR_1
+      position: {x: -0.023265077, y: 0, z: -0.0005509035}
+      rotation: {x: 0, y: -0.012872336, z: -0, w: 0.99991715}
+      scale: {x: 1, y: 1, z: 1}
+    - name: INDICADOR_3
+      parentName: INDICADOR_2
+      position: {x: -0.02370518, y: 0, z: -3.0531134e-17}
+      rotation: {x: 0, y: -0.055300385, z: -0, w: 0.99846977}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MEDIO_1
+      parentName: MAO_ESQUERDA
+      position: {x: -0.058464188, y: 0, z: 0.007853398}
+      rotation: {x: 0, y: -0.007935758, z: -0, w: 0.9999685}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MEDIO_2
+      parentName: MEDIO_1
+      position: {x: -0.027490355, y: 0, z: -1.01238456e-16}
+      rotation: {x: 0, y: 0.039628938, z: -0, w: 0.9992145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MEDIO_3
+      parentName: MEDIO_2
+      position: {x: -0.030127134, y: 0, z: -0.0006012986}
+      rotation: {x: 0, y: -0.031698167, z: -0, w: 0.99949753}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MINDINHO_1
+      parentName: MAO_ESQUERDA
+      position: {x: -0.055846386, y: 0, z: -0.033158794}
+      rotation: {x: 0, y: -0.09095827, z: -0, w: 0.99585474}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MINDINHO_2
+      parentName: MINDINHO_1
+      position: {x: -0.016858347, y: 0, z: -3.8857806e-18}
+      rotation: {x: 0, y: 0.01070258, z: -0, w: 0.9999427}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MINDINHO_3
+      parentName: MINDINHO_2
+      position: {x: -0.016353972, y: 0, z: 1.3877788e-17}
+      rotation: {x: 0, y: 0.08029484, z: -0, w: 0.99677116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: POLEGAR_1
+      parentName: MAO_ESQUERDA
+      position: {x: -0.004362999, y: 0, z: 0.029232094}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: POLEGAR_2
+      parentName: POLEGAR_1
+      position: {x: -0.025741693, y: 0, z: 0.015270497}
+      rotation: {x: 0, y: 0.09310839, z: -0, w: 0.99565595}
+      scale: {x: 1, y: 1, z: 1}
+    - name: POLEGAR_3
+      parentName: POLEGAR_2
+      position: {x: -0.023531899, y: 0, z: 6.1062266e-18}
+      rotation: {x: 0, y: -0.09310839, z: -0, w: 0.99565595}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PESCOCO
+      parentName: PEITO
+      position: {x: -0.001068839, y: 0.120778814, z: 0.0035795341}
+      rotation: {x: 0, y: 0, z: -0.70397115, w: 0.71022856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CABECA
+      parentName: PESCOCO
+      position: {x: -0.1366901, y: 0.0019635311, z: 0}
+      rotation: {x: -0.011310476, y: 0.011411011, z: 0.7038803, w: 0.7101369}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PERNA_DIREITA
+      parentName: RAIZ
+      position: {x: 0.06466746, y: 0.08345635, z: 0.0015266407}
+      rotation: {x: 0.99994135, y: 0.010830775, z: 8.069556e-11, w: 0.0000000074501436}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JOELHO1
+      parentName: PERNA_DIREITA
+      position: {x: 0.36921936, y: -0.0000003064322, z: -4.569678e-15}
+      rotation: {x: 0.000000012903465, y: -2.8557894e-11, z: 0.014304859, w: 0.9998977}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CANELA1
+      parentName: JOELHO1
+      position: {x: 0.38133067, y: 0.0000005216698, z: 1.6254581e-10}
+      rotation: {x: -1.1603898e-24, y: -0.000000007655152, z: -0.7013194, w: 0.7128472}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CALCANHAR1
+      parentName: CANELA1
+      position: {x: -0.0020690004, y: 0.08960022, z: 0.0420971}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PE1
+      parentName: CANELA1
+      position: {x: -0.0020689983, y: 0.08960022, z: -0.1558226}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PERNA_ESQUERDA
+      parentName: RAIZ
+      position: {x: 0.06071238, y: -0.08662023, z: 0.0015266867}
+      rotation: {x: 0, y: 0, z: 0.9994193, w: 0.034076013}
+      scale: {x: 1, y: 1, z: 1}
+    - name: JOELHO
+      parentName: PERNA_ESQUERDA
+      position: {x: -0.36921924, y: 6.661338e-18, z: 0}
+      rotation: {x: 0, y: 0, z: 0.014304859, w: 0.9998977}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CANELA
+      parentName: JOELHO
+      position: {x: -0.38133064, y: -9.65894e-16, z: 0}
+      rotation: {x: 0, y: 0, z: -0.7013194, w: 0.7128472}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CALCANHAR
+      parentName: CANELA
+      position: {x: 0.002068776, y: -0.08960017, z: -0.042097095}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PE
+      parentName: CANELA
+      position: {x: 0.002068776, y: -0.08960017, z: 0.15582299}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

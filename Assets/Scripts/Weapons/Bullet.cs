@@ -5,29 +5,33 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float Speed;
-    public int BulletDamage;
 
-    private Collider BulletCollider;
+    public float speedBullet;
+    public float damageBullet;
+    public float distanceBullet;
 
+    private float currentDistance;
     void Start()
     {
-        BulletCollider = gameObject.GetComponentInChildren<Collider>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.back * Speed * Time.deltaTime);
-        Destroy(gameObject, 5f);
+        transform.Translate(-transform.forward * speedBullet * Time.deltaTime, Space.World);
+        currentDistance = Vector3.Magnitude(transform.position);
+        if (currentDistance > distanceBullet)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Cube")
+        if (other.transform.root.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Bala Colidiu");
-            other.gameObject.GetComponent<Teste>().CubeLife -= BulletDamage;
+            other.gameObject.GetComponent<PlayerController>().lifePlayer -= damageBullet;
             Destroy(gameObject);
         }
     }

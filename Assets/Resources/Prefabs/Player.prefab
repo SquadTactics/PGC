@@ -111,11 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600eac09a7dcbd148b66f961c1060057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _guns: []
-  _speedMovement: 4
-  _forceJump: 2
-  _verticalMax: 20
-  _verticalMin: -20
+  Guns: []
+  LifePlayer: 1000
+  SpeedMoving: 5
+  RunSpeed: 10
+  GunCrosshair: {fileID: 0}
 --- !u!114 &-5561445946559086055
 MonoBehaviour:
   m_ObjectHideFlags: 0

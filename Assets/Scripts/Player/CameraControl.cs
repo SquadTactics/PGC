@@ -4,27 +4,40 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public float sensitivity;
-    public GameObject TargetLook;
-    public GameObject Player;
+    public Transform target;
 
-    private void Start()
+    public float distance;
+    public float yHigh;
+    public float sensibility;
+    public float minY;
+    public float maxY;
+
+    private float x =0;
+    private float y = 0;
+
+    void Start()
     {
+        Vector3 angles = transform.eulerAngles;
+        x = angles.x;
+        y = angles.y;
+
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
-    void Update()
+    private void LateUpdate()
     {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = -Input.GetAxis("Mouse Y");
-        float movementY = mouseY * sensitivity * Time.deltaTime;
-        float newAngleY = transform.eulerAngles.x + mouseY;
-        transform.Rotate(0f, mouseX * sensitivity * Time.deltaTime, 0f, Space.World);
-        if (newAngleY <= 20 || newAngleY >= 270)
+        if (target != null)
         {
-            transform.Rotate(movementY, 0f, 0f);
+            x += Input.GetAxis("Mouse X") * sensibility * 0.02f;
+            y -= Input.GetAxis("Mouse Y") * sensibility * 0.02f;
+            y = Mathf.Clamp(y, maxY, minY);
+
+            Quaternion rotationObject = Quaternion.Euler(y, x, 0);
+            Vector3 positionObject = rotationObject * new Vector3(0, yHigh, 0 - distance) + target.position;
+
+            transform.rotation = rotationObject;
+            transform.position = positionObject;
         }
-        //transform.LookAt(new Vector3(TargetLook.transform.position.x, transform.position.y, TargetLook.transform.position.z));
-        
-    }  
+    }
 }

@@ -2,32 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class M1916 : BaseGuns
+public class M1916 : BaseWeapons
 {
-    //private AudioSource GunSounds;
-
+    // Start is called before the first frame update
     new void Start()
     {
         base.Start();
-       
+        bulletProjectil[0].distanceBullet = gunDistanceShoot;
+        bulletProjectil[0].damageBullet = gunDamage;
     }
+
     // Update is called once per frame
     new void Update()
     {
         base.Update();
     }
 
-    protected override void OnReload()
+    protected override void Shoot()
     {
-        
+        Instantiate(bulletProjectil[0], spawnBullet.position, spawnBullet.rotation);
     }
 
-    protected override void OnShoot()
+    protected override void Reload()
     {
-        if (BulletComb > 0 && CanFire)
-        {
-            Instantiate(GunBullet, SpawnBullet.transform.position, SpawnBullet.transform.rotation);
-            
-        }
+        
     }
 }
