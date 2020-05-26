@@ -22,9 +22,10 @@ public class PlayerController : MonoBehaviour
     private WeaponsController weaponsController;
     private Animator animPlayer;
 
-    private bool isCrouching;
-    private bool isSprint;
+    private bool isCrouching = false;
+    private bool isSprint = false;
     private float initialRotation;
+    private float currentSpeedWalk;
 
     void Start()
     {
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
         move = transform.TransformDirection(move);
         animPlayer.SetFloat("Vertical",v);
         animPlayer.SetFloat("Horizontal",h);
+
         if (!isCrouching && !isSprint)
         {
             characterController.SimpleMove(move * speedWalk);
@@ -110,28 +112,30 @@ public class PlayerController : MonoBehaviour
             weapons[0].OnReload();
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && !isCrouching)
         {
             isSprint = true;
+            animPlayer.SetBool("Sprint", true);
         }
 
         else
         {
             isSprint = false;
+            animPlayer.SetBool("Sprint", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !isSprint)
         {
-            if (isCrouching)
+            if (!isCrouching)
             {
-                isCrouching = false;
-                isSprint = false;
+                animPlayer.SetBool("Crounching", true);
+                isCrouching = true;
             }
 
-            else if (!isCrouching)
+            else
             {
-                isCrouching= true;
-                isSprint = true;
+                animPlayer.SetBool("Crounching", false);
+                isCrouching = false;
             }
         }
     }
