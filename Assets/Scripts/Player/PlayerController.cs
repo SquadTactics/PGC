@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
         float v = Input.GetAxis("Vertical");
         Vector3 move = new Vector3(h, 0, v);
         move = transform.TransformDirection(move);
+        animPlayer.SetFloat("Vertical",v);
+        animPlayer.SetFloat("Horizontal",h);
         if (!isCrouching && !isSprint)
         {
             characterController.SimpleMove(move * speedWalk);

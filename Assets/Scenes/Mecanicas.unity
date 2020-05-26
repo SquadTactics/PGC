@@ -603,7 +603,7 @@ MonoBehaviour:
   spawnWeapons: {fileID: 232958218}
   coluna: {fileID: 1695803340}
   cameraMain: {fileID: 194979721}
-  speedWalk: 10
+  speedWalk: 7
   speedCrouching: 5
   speedSprint: 20
   lifePlayer: 1000
