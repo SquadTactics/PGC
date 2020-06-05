@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public float speedCrouching;
     public float speedSprint;
     public float lifePlayer;
-    public int weaponId;
 
     private Rigidbody playerRb;
     private CharacterController characterController;
@@ -26,31 +25,43 @@ public class PlayerController : MonoBehaviour
     private bool isSprint = false;
     private float initialRotation;
     private float currentSpeedWalk;
+    private int selectedWeapon = 0;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         weaponsController = FindObjectOfType(typeof(WeaponsController)) as WeaponsController;
-        animPlayer = GetComponent<Animator>();  
+        animPlayer = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody>();
-        GetWeapons(weaponId);
         initialRotation = coluna.transform.rotation.x;
+        GetWeapons(0);
+        GetWeapons(1);
+        GetWeapons(2);
+        SelectedWeapon(0);  
     }
 
-    
+
     void Update()
     {
         PlayerMovement();
         PlayerInputs();
     }
-    
+
     private void GetWeapons(int weaponId)
     {
         BaseWeapons weapon = weaponsController.GetWeapons(weaponId);
         weapon.transform.SetParent(spawnWeapons);
-        weapon.gameObject.SetActive(true);
+        weapon.gameObject.SetActive(false);
         weapon.transform.localPosition = Vector3.zero;
+        weapon.transform.rotation = spawnWeapons.transform.rotation;
         weapons.Add(weapon);
+    }
+
+    private void SelectedWeapon(int weaponIndex)
+    {
+        weapons[selectedWeapon].gameObject.SetActive(false);
+        selectedWeapon = weaponIndex;
+        weapons[selectedWeapon].gameObject.SetActive(true);
     }
 
     void PlayerMovement()
@@ -97,7 +108,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            weapons[0].OnShoot();
+            weapons[selectedWeapon].OnShoot();
             Debug.Log("Atirando");
         }
 
@@ -109,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            weapons[0].OnReload();
+            weapons[selectedWeapon].OnReload();
         }
 
         if (Input.GetKey(KeyCode.LeftShift) && !isCrouching)
@@ -138,5 +149,26 @@ public class PlayerController : MonoBehaviour
                 isCrouching = false;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SelectedWeapon(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SelectedWeapon(1);
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            SelectedWeapon(0);
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            SelectedWeapon(1);
+        }
+         
     }
 }
